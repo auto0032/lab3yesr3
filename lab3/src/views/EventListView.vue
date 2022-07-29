@@ -1,20 +1,18 @@
 <template>
+  <h1>Events For Goods</h1>
   <div class="events">
     <EventCard v-for="event in events" :key="event.id" :event="event" />
-    <OrganizerCard v-for="event in events" :key="event.id" :event="event" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import EventCard from '@/components/EventCard.vue'
-import OrganizerCard from '@/components/OrganizerCard.vue'
 
 export default {
-  name: 'HomeView',
+  name: 'EventListView',
   components: {
-    EventCard, //register it as a child component.
-    OrganizerCard
+    EventCard //register it as a child component.
   },
   data() {
     return {
